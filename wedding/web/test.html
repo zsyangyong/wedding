@@ -22,7 +22,13 @@
 <script>
     var canvas = document.getElementById("test1");
     var context = canvas.getContext("2d");
-    
+    var img = new Image();
 
+    window.onload = function () {
+        img.src = "7X5A1987.JPG";
+        img.onload = function (ev) {
+            context.drawImage(img, 200, 100, 600, 400, 50, 50, 800,600);
+        }
+        }
 </script>
 </html>
